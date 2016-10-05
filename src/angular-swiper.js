@@ -46,7 +46,8 @@
                 slideCls: '@',
                 direction: '@',
                 swiper: '=',
-                overrideParameters: '='
+                overrideParameters: '=',
+                speed: '='
             },
             controller: function($scope, $element, $timeout) {
                 var uuid = createUUID();
@@ -61,7 +62,8 @@
                     direction: $scope.direction || 'horizontal',
                     loop: $scope.loop || false,
                     initialSlide: $scope.initialSlide || 0,
-                    showNavButtons: false
+                    showNavButtons: false,
+                    speed: $scope.speed || 300
                 };
 
                 if (!angular.isUndefined($scope.autoplay) && typeof $scope.autoplay === 'number') {
